@@ -8,6 +8,6 @@
 * pip install boto3
 * pip install GitPython
 
-# How to run
+## How to run
 * Clone repository
 * python3 route53_backup_v1.py 'commit message'
