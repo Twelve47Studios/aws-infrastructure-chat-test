@@ -4,6 +4,10 @@ import os
 import json
 from git import Repo
 
+def run(commit_message):
+  generate_route_files()
+  push_to_github(commit_message)
+
 def generate_route_files():
   base_path = os.path.join(os.getcwd(), 'aws')
   if not os.path.exists(base_path):
