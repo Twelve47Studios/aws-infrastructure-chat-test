@@ -26,10 +26,9 @@ def generate_route_files():
 
   for zone in zones:
     print('zone: ',zone)
-    #zone_name =zone[]
+    zone_name = zone['Name']
     zone_type = zone['Id'].split('/')[1]
-    zone_id = zone['Id'].split('/')[2]
-    zone_resource_path = os.path.join(base_path, zone_id)
+    zone_resource_path = os.path.join(base_path, zone_name)
     if not os.path.exists(zone_resource_path):
       os.mkdir(zone_resource_path)
     zone_file = open(os.path.join(zone_resource_path, zone_type + '.json'),'w')
