@@ -19,6 +19,8 @@ def generate_route_files():
   shutil.rmtree(base_path)
   if not os.path.exists(base_path):
     os.mkdir(base_path)
+  else
+    shutil.rmtree(base_path)
 
   r53 = boto3.client('route53')
   zones = r53.list_hosted_zones()["HostedZones"]
