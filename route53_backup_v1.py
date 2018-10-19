@@ -1,4 +1,3 @@
-#exec(open("route53_backup_v1.py").read())
 import boto3
 import os
 import json
@@ -16,17 +15,18 @@ def generate_route_files():
     os.mkdir(base_path)
 
   base_path = os.path.join(base_path, 'route53')
-  shutil.rmtree(base_path)
-  if not os.path.exists(base_path):
-    os.mkdir(base_path)
-  else
+
+  if os.path.exists(base_path):
     shutil.rmtree(base_path)
+
+  os.mkdir(base_path)
 
   r53 = boto3.client('route53')
   zones = r53.list_hosted_zones()["HostedZones"]
 
   for zone in zones:
     print('zone: ',zone)
+    #zone_name =zone[]
     zone_type = zone['Id'].split('/')[1]
     zone_id = zone['Id'].split('/')[2]
     zone_resource_path = os.path.join(base_path, zone_id)
