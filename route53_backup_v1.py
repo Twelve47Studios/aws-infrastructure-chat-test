@@ -2,6 +2,7 @@
 import boto3
 import os
 import json
+import shutil
 from git import Repo
 
 def run(commit_message):
@@ -14,8 +15,8 @@ def generate_route_files():
     os.mkdir(base_path)
 
   base_path = os.path.join(base_path, 'route53')
+  shutil.rmtree(base_path)
   if not os.path.exists(base_path):
-    os.removedirs(base_path)
     os.mkdir(base_path)
 
   r53 = boto3.client('route53')
