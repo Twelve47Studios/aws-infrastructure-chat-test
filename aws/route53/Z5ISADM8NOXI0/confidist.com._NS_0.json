@@ -1,0 +1,19 @@
+{
+  "Name": "confidist.com.",
+  "ResourceRecords": [
+    {
+      "Value": "ns-2046.awsdns-63.co.uk."
+    },
+    {
+      "Value": "ns-498.awsdns-62.com."
+    },
+    {
+      "Value": "ns-1299.awsdns-34.org."
+    },
+    {
+      "Value": "ns-802.awsdns-36.net."
+    }
+  ],
+  "TTL": 172800,
+  "Type": "NS"
+}

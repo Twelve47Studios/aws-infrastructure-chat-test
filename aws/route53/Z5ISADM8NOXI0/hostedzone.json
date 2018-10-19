@@ -1,0 +1,10 @@
+{
+  "CallerReference": "32354C1A-8D3A-07E2-9A91-418B036599CB",
+  "Config": {
+    "Comment": "Production app site",
+    "PrivateZone": false
+  },
+  "Id": "/hostedzone/Z5ISADM8NOXI0",
+  "Name": "confidist.com.",
+  "ResourceRecordSetCount": 2
+}
