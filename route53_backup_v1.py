@@ -4,6 +4,7 @@ import os
 import json
 import shutil
 from git import Repo
+from sys import argv
 
 def run(commit_message):
   generate_route_files()
@@ -51,3 +52,7 @@ def push_to_github(commit_message):
   repo.git.commit(m=commit_message)
   origin = repo.remote('origin')
   origin.push()
+
+script, commit_message = argv
+if commit_message:
+  run(commit_message)
