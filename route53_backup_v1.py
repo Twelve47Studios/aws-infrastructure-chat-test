@@ -1,3 +1,4 @@
+#exec(open("route53_backup_v1.py").read())
 import boto3
 import os
 import json
@@ -38,9 +39,9 @@ def generate_route_files():
         record_index += 1
 
 def push_to_github(commit_message):
-repo_dir = os.getcwd()
-repo = Repo(repo_dir)
-repo.index.add('u=True')
-repo.index.commit(commit_message)
-origin = repo.remote('origin')
-origin.push()
+  repo_dir = os.getcwd()
+  repo = Repo(repo_dir)
+  repo.git.add(u=True)
+  repo.git.commit(commit_message)
+  origin = repo.remote('origin')
+  origin.push()
