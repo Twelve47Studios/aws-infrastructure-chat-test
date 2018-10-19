@@ -45,7 +45,7 @@ def generate_route_files():
 def push_to_github(commit_message):
   repo_dir = os.getcwd()
   repo = Repo(repo_dir)
-  repo.git.add(u=True)
+  repo.git.add(A=True)
   repo.git.commit(m=commit_message)
   origin = repo.remote('origin')
   origin.push()

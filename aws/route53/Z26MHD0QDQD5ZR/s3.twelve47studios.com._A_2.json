@@ -1,0 +1,9 @@
+{
+  "AliasTarget": {
+    "DNSName": "s3-website-us-east-1.amazonaws.com.",
+    "EvaluateTargetHealth": false,
+    "HostedZoneId": "Z3AQBSTGFYJSTF"
+  },
+  "Name": "s3.twelve47studios.com.",
+  "Type": "A"
+}
