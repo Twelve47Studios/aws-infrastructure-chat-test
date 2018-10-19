@@ -15,6 +15,7 @@ def generate_route_files():
 
   base_path = os.path.join(base_path, 'route53')
   if not os.path.exists(base_path):
+    os.removedirs(base_path)
     os.mkdir(base_path)
 
   r53 = boto3.client('route53')
